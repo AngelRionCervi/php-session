@@ -2,9 +2,6 @@
 <?php
 if (!isset($_SESSION)) { session_start(); }
 
-if (isset($_SESSION['login'])){
-  var_dump($_SESSION['login']);
-}
 ?>
 <section class="cookies container-fluid">
   <div class="row">

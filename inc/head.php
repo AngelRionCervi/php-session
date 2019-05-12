@@ -1,3 +1,7 @@
+<?php 
+if (!isset($_SESSION)) { session_start(); }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +40,13 @@
           <li><a href="#">Chocolates chips</a></li>
           <li><a href="#">Nuts</a></li>
           <li><a href="#">Gluten full</a></li>
-          <li><a href="login.php">login</a></li>
+          <li><a href="#">Gluten full</a></li>
+          <?php if (isset($_SESSION['login'])){ ?>
+            <li><a href="#">Hello <?php echo $_SESSION['login'] ?> </a></li>
+          <?php } ?>
+          <?php if (!isset($_SESSION['login'])){ ?>
+            <li><a href="login.php">login</a></li>
+          <?php } ?>
           <li><a href="logout.php">logout</a></li>
           <li>
             <a href="/cart.php" class="btn btn-warning navbar-btn">

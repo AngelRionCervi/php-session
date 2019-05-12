@@ -9,7 +9,6 @@ if (isset($_SESSION['login'])) {
 }
 
 if (isset($_POST['login'])){
-  var_dump($_POST['login']);
   $_SESSION['login'] = $_POST['login'];
   header('Location: index.php');
 }
